@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "NGe1uYMhp9mko6ANt96tet/72/kPdgTwA0fr/vuv2AGW0AxkukpD0AFFUjxf12B1EcfKP6Swc56yUzJ687RqWQ==",
+  "dgSpecHash": "Bit/4kctFkGuRdcs/y6KUPM3SATmtCYNkVR95Yt40mBZbeFGxFlPtCn0uFMVc2DifgQidrkvURfwpK3vwiR7RQ==",
   "success": true,
   "projectFilePath": "/home/stan05/Downloads/nomadNook/API/API.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,10 @@
     "/home/stan05/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/home/stan05/.nuget/packages/microsoft.identitymodel.abstractions/7.6.3/microsoft.identitymodel.abstractions.7.6.3.nupkg.sha512",
+    "/home/stan05/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.6.3/microsoft.identitymodel.jsonwebtokens.7.6.3.nupkg.sha512",
+    "/home/stan05/.nuget/packages/microsoft.identitymodel.logging/7.6.3/microsoft.identitymodel.logging.7.6.3.nupkg.sha512",
+    "/home/stan05/.nuget/packages/microsoft.identitymodel.tokens/7.6.3/microsoft.identitymodel.tokens.7.6.3.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.netcore.app/2.0.7/microsoft.netcore.app.2.0.7.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.netcore.dotnetapphost/2.0.7/microsoft.netcore.dotnetapphost.2.0.7.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.netcore.dotnethostpolicy/2.0.7/microsoft.netcore.dotnethostpolicy.2.0.7.nupkg.sha512",
@@ -55,6 +59,7 @@
     "/home/stan05/.nuget/packages/system.composition.hosting/6.0.0/system.composition.hosting.6.0.0.nupkg.sha512",
     "/home/stan05/.nuget/packages/system.composition.runtime/6.0.0/system.composition.runtime.6.0.0.nupkg.sha512",
     "/home/stan05/.nuget/packages/system.composition.typedparts/6.0.0/system.composition.typedparts.6.0.0.nupkg.sha512",
+    "/home/stan05/.nuget/packages/system.identitymodel.tokens.jwt/7.6.3/system.identitymodel.tokens.jwt.7.6.3.nupkg.sha512",
     "/home/stan05/.nuget/packages/system.io.pipelines/6.0.3/system.io.pipelines.6.0.3.nupkg.sha512",
     "/home/stan05/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
     "/home/stan05/.nuget/packages/system.reflection.metadata/6.0.1/system.reflection.metadata.6.0.1.nupkg.sha512",

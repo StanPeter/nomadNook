@@ -3,15 +3,17 @@ using System.Text;
 using API.Data;
 using API.DTOs;
 using API.Entities;
+using API.Interfaces;
+using API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 
-public class AccountController(DataContext context) : BaseApiController
+public class AccountController(DataContext context, ITokenService tokenService) : BaseApiController
 {
     [HttpPost("register")]
-    public async Task<ActionResult<User>> Register(RegisterDto registerDto)
+    public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
     {
         if (await IsUserRegistered(registerDto.UserName)) return BadRequest("User already exists");
 
@@ -27,11 +29,17 @@ public class AccountController(DataContext context) : BaseApiController
         context.Users.Add(user);
         await context.SaveChangesAsync();
 
-        return user;
+        var userDto = new UserDto
+        {
+            UserName = user.UserName,
+            Token = tokenService.CreateJwtToken(user)
+        };
+
+        return userDto;
     }
 
     [HttpPost("login")]
-    public async Task<ActionResult<User>> LoginUser(LoginDto loginDto)
+    public async Task<ActionResult<UserDto>> LoginUser(LoginDto loginDto)
     {
         var user = await context.Users.FirstOrDefaultAsync(u => u.UserName == loginDto.UserName.ToLower());
         if (user == null) return Unauthorized("Invalid username");
@@ -44,7 +52,13 @@ public class AccountController(DataContext context) : BaseApiController
             if (user.PasswordHash[i] != hashedPassword[i]) return Unauthorized("Passwords don't match");
         }
 
-        return user;
+        var userDto = new UserDto
+        {
+            UserName = user.UserName,
+            Token = tokenService.CreateJwtToken(user)
+        };
+
+        return userDto;
     }
 
     private async Task<bool> IsUserRegistered(string userName)
