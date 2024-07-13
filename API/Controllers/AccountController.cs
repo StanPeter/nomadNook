@@ -15,7 +15,8 @@ public class AccountController(DataContext context, ITokenService tokenService) 
     [HttpPost("register")]
     public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
     {
-        if (await IsUserRegistered(registerDto.UserName)) return BadRequest("User already exists");
+        if (await IsUserRegistered(registerDto.UserName))
+            return BadRequest("User already exists");
 
         using var hmac = new HMACSHA512();
 
@@ -41,15 +42,19 @@ public class AccountController(DataContext context, ITokenService tokenService) 
     [HttpPost("login")]
     public async Task<ActionResult<UserDto>> LoginUser(LoginDto loginDto)
     {
-        var user = await context.Users.FirstOrDefaultAsync(u => u.UserName == loginDto.UserName.ToLower());
-        if (user == null) return Unauthorized("Invalid username");
+        var user = await context.Users.FirstOrDefaultAsync(u =>
+            u.UserName == loginDto.UserName.ToLower()
+        );
+        if (user == null)
+            return Unauthorized("Invalid username");
 
         using var hmac = new HMACSHA512(user.PasswordSalt);
         var hashedPassword = hmac.ComputeHash(Encoding.UTF8.GetBytes(loginDto.Password));
 
         for (int i = 0; i < hashedPassword.Length; i++)
         {
-            if (user.PasswordHash[i] != hashedPassword[i]) return Unauthorized("Passwords don't match");
+            if (user.PasswordHash[i] != hashedPassword[i])
+                return Unauthorized("Passwords don't match");
         }
 
         var userDto = new UserDto
