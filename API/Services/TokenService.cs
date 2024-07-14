@@ -11,16 +11,19 @@ public class TokenService(IConfiguration config) : ITokenService
 {
     public string CreateJwtToken(User user)
     {
-        var tokenSecret = config["TokenSecret"] ?? throw new Exception("No TokenKey could be found inside of app settings config");
-        if (tokenSecret.Length < 64) throw new Exception("Token needs to be at least 64 characters");
+        var tokenSecret =
+            config["TokenSecret"]
+            ?? throw new Exception("No TokenKey could be found inside of app settings config");
+        if (tokenSecret.Length < 64)
+            throw new Exception("Token needs to be at least 64 characters");
         var tokenSecretEncoded = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(tokenSecret));
 
-        var claims = new List<Claim>
-        {
-            new(ClaimTypes.NameIdentifier, user.UserName),
-        };
+        var claims = new List<Claim> { new(ClaimTypes.NameIdentifier, user.UserName), };
 
-        var credentials = new SigningCredentials(tokenSecretEncoded, SecurityAlgorithms.HmacSha512Signature);
+        var credentials = new SigningCredentials(
+            tokenSecretEncoded,
+            SecurityAlgorithms.HmacSha512Signature
+        );
 
         var tokenDescriptior = new SecurityTokenDescriptor
         {
