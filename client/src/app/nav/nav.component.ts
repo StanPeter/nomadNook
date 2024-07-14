@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ILogin } from '../ts/serviceInterfaces';
 import { AccountService } from '../_services/account.service';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'Navigation',
@@ -25,5 +26,9 @@ export class NavComponent {
       },
       error: (err: any) => console.log(err, 'ERROR'),
     });
+  }
+
+  logout() {
+    console.log('clicked');
   }
 }
