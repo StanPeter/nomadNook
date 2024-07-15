@@ -39,3 +39,9 @@ owl-carousel-o {
   height: 500px; /* Set a fixed height for the images */
   object-fit: cover; /* Ensure the images cover the area without distortion */
 }
+
+.register-form {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
