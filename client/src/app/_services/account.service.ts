@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject, signal } from '@angular/core';
-import { ILogin } from '../ts/serviceInterfaces';
+import { ILogin, IRegister } from '../ts/serviceInterfaces';
 import { User } from '../_models/user';
 import { map } from 'rxjs';
 
@@ -15,6 +15,19 @@ export class AccountService {
   login(loginModel: ILogin) {
     return this.http
       .post<User>(`${this.baseUrl}/account/login`, loginModel)
+      .pipe(
+        map((userData) => {
+          if (userData) {
+            localStorage.setItem('user', JSON.stringify(userData));
+            this.currentUser.set(userData);
+          }
+        })
+      );
+  }
+
+  register(signUpModel: IRegister) {
+    return this.http
+      .post<User>(`${this.baseUrl}/account/register`, signUpModel)
       .pipe(
         map((userData) => {
           if (userData) {

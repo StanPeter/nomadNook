@@ -40,8 +40,3 @@ owl-carousel-o {
   object-fit: cover; /* Ensure the images cover the area without distortion */
 }
 
-.register-form {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-}
