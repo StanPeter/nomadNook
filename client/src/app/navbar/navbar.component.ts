@@ -14,25 +14,19 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  private accountService = inject(AccountService);
-  isLoggedIn = false;
+  accountService = inject(AccountService);
   isNavbarCollapsed = true;
   model: ILogin = {};
 
   login() {
     this.accountService.login(this.model).subscribe({
-      next: (res: any) => {
-        console.log(res, ' res');
-        if (res.hasOwnProperty('token'))
-          localStorage.setItem('accessToken', res.token);
-        this.isLoggedIn = true;
-      },
+      next: (res: any) => {},
       error: (err: any) => console.log(err, 'ERROR'),
     });
   }
 
   logout() {
-    console.log('clicked');
+    this.accountService.logout();
   }
 
   toggleNavbar() {
