@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <owl-carousel-o
+    [options]="{
+      loop: true,
+      dots: true,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+      items: 1
+    }"
+  >
+    <ng-template carouselSlide>
+      <img
+        src="assets/images/slide1.jpg"
+        alt="Slide 1"
+        class="carousel-image"
+      />
+      <div class="slide-caption">Slide 1 Caption</div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <img
+        src="assets/images/slide2.jpg"
+        alt="Slide 2"
+        class="carousel-image"
+      />
+      <div class="slide-caption">Slide 2 Caption</div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <img
+        src="assets/images/slide3.jpg"
+        alt="Slide 3"
+        class="carousel-image"
+      />
+      <div class="slide-caption">Slide 3 Caption</div>
+    </ng-template>
+  </owl-carousel-o>
+</div>
+
+<div class="container mt-5" style="text-align: center">
+  <h1>Find your match</h1>
+  <p class="lead">Come on in to view your matches...</p>
+</div>
+
+<div class="container my-5">
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Enter your username" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Enter your email" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" placeholder="Enter your password" />
+    </mat-form-field>
+    <button mat-raised-button color="primary">Get Started</button>
+  </form>
+</div>

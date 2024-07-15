@@ -1,0 +1,41 @@
+.container {
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+button {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.slide-caption {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+owl-carousel-o {
+  margin-top: 30px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 500px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure the images cover the area without distortion */
+}
