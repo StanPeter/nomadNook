@@ -12,15 +12,18 @@ import { AccountService } from '../_services/account.service';
 })
 export class RegisterComponent {
   accountService = inject(AccountService);
-  cancelRegister = output<boolean>();
-  users = input.required<{ userName: string; id: number }[]>();
+  cancelRegisterMode = output<boolean>();
   model: IRegister = {};
 
   register() {
-    this.accountService.register(this.model).subscribe({});
+    this.accountService.register(this.model).subscribe({
+      error: (error) => {
+        console.log(error);
+      },
+    });
   }
 
   cancel() {
-    this.cancelRegister.emit(false);
+    this.cancelRegisterMode.emit(false);
   }
 }

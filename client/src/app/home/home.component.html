@@ -42,4 +42,11 @@
   <p class="lead">Come on in to view your matches...</p>
 </div>
 
-<app-register [users]="users"> </app-register>
+<div class="d-flex justify-content-center mb-5">
+  <button class="btn btn-primary" (click)="registerToggle()">Register</button>
+</div>
+
+<app-register
+  *ngIf="registerMode"
+  (cancelRegisterMode)="cancelRegisterMode($event)"
+/>

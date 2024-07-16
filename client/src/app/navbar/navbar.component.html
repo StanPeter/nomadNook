@@ -9,7 +9,7 @@
 <mat-toolbar color="primary">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid px-5">
-      <a class="navbar-brand" href="#">Nomad Nook</a>
+      <a class="navbar-brand" routerLink="/" href="#">Nomad Nook</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -25,15 +25,32 @@
         <ng-container *ngIf="this.accountService.currentUser(); else loginForm">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
+              <a
+                routerLink="/members"
+                routerLinkActive="active"
+                class="nav-link link-sm"
+                aria-current="page"
+                href="#"
                 >Matches</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Lists</a>
+              <a
+                routerLink="/lists"
+                routerLinkActive="active"
+                class="nav-link link-sm"
+                href="#"
+                >Lists</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Messages</a>
+              <a
+                routerLink="/messages"
+                routerLinkActive="active"
+                class="nav-link link-sm"
+                href="#"
+                >Messages</a
+              >
             </li>
           </ul>
           <div class="dropdown ms-auto">

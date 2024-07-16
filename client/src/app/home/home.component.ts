@@ -4,11 +4,18 @@ import { MatInputModule } from '@angular/material/input';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RegisterComponent } from '../register/register.component';
 import { HttpClient } from '@angular/common/http';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatToolbar, MatInputModule, CarouselModule, RegisterComponent],
+  imports: [
+    MatToolbar,
+    MatInputModule,
+    CarouselModule,
+    RegisterComponent,
+    NgIf,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
