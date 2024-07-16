@@ -1,13 +1,5 @@
-<!-- <mat-toolbar color="primary">
-  <span>User Management</span>
-  <div class="spacer"></div>
-  <a mat-button>Home</a>
-  <a mat-button>About</a>
-  <a mat-button>Contact</a>
-</mat-toolbar> -->
-
 <mat-toolbar color="primary">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
     <div class="container-fluid px-5">
       <a class="navbar-brand" routerLink="/" href="#">Nomad Nook</a>
       <button
@@ -61,7 +53,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Welcome, {{ model.userName }}
+              Welcome {{ accountService.currentUser()?.userName | titlecase }}
             </button>
             <ul
               class="dropdown-menu dropdown-menu-end"
