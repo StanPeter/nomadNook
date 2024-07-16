@@ -6,6 +6,7 @@ import { AccountService } from '../_services/account.service';
 import { NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-navbar',
@@ -23,6 +24,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class NavbarComponent {
   private router = inject(Router);
+  private toastr = inject(ToastrService);
   accountService = inject(AccountService);
   isNavbarCollapsed = true;
   model: ILogin = {};
@@ -31,8 +33,11 @@ export class NavbarComponent {
     this.accountService.login(this.model).subscribe({
       next: (_) => {
         this.router.navigateByUrl('/members');
+        this.toastr.success('You are now logged in');
       },
-      error: (err: any) => console.log(err, 'ERROR'),
+      error: (err: Error) => {
+        this.toastr.error('There was an error logging in');
+      },
     });
   }
 
