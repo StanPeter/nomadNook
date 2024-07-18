@@ -1,0 +1,15 @@
+<div class="server-error-container">
+  <h4>Internal Server Error</h4>
+  <div *ngIf="error">
+    <h5 class="text-danger error-text">Error: {{ error.message }}</h5>
+    <code *ngIf="error.messageDetail" class="m-2">{{
+      error.messageDetail
+    }}</code>
+    <p>
+      Something went wrong on our end. Please try again later or contact support
+      if the issue persists.
+    </p>
+    <button class="btn btn-primary mx-2" (click)="retry()">Reload page</button>
+    <button class="btn btn-secondary" (click)="goHome()">Go to Home</button>
+  </div>
+</div>

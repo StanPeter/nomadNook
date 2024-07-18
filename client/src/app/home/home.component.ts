@@ -5,6 +5,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { RegisterComponent } from '../register/register.component';
 import { HttpClient } from '@angular/common/http';
 import { NgIf } from '@angular/common';
+import { TestErrorsComponent } from '../errors/test-errors/test-errors.component';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,7 @@ import { NgIf } from '@angular/common';
     CarouselModule,
     RegisterComponent,
     NgIf,
+    TestErrorsComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

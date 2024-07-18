@@ -42,6 +42,8 @@
   <button class="btn btn-primary" (click)="registerToggle()">Register</button>
 </div>
 
+<app-test-errors />
+
 <app-register
   *ngIf="registerMode"
   (cancelRegisterMode)="cancelRegisterMode($event)"
