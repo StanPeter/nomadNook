@@ -18,10 +18,10 @@ export class ServerErrorComponent {
   }
 
   retry() {
-    this.router.navigate([this.router.url]);
+    this.router.navigateByUrl(this.router.url);
   }
 
   goHome() {
-    this.router.navigate(['/']);
+    this.router.navigateByUrl('/');
   }
 }
