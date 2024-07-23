@@ -22,8 +22,8 @@ public class User
     public required List<Photo> Photos { get; set; } = [];
 
     // automapper will automatically populate Age in MemberDto
-    public int GetAge()
-    {
-        return DateOfBirth.CalculateAge();
-    }
+    // public int GetAge()
+    // {
+    //     return DateOfBirth.CalculateAge();
+    // }
 }
