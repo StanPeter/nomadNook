@@ -30,6 +30,8 @@ public class UsersController(IUserRepository userRepository, IMapper mapper) : B
             return NotFound();
         }
 
-        return user;
+        var mappedUser = mapper.Map<MemberDto>(user);
+
+        return Ok(mappedUser);
     }
 }
