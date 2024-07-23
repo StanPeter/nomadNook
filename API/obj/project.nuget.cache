@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "j3ulpQ65XROwcN804dVJs7Jy8fbZrt/xkmy/8uNqAjBrxmpPw1fUmpofkuvNsMDLpZ2U3oO6fL/caVeT///ROQ==",
+  "dgSpecHash": "R17zBKZrf94s5TIOi35nWZzbL5HEQrgiEZmlaxiVDCIjGPK03pn3qN1PjS0dpxPd9IAuv0CD2Lw26abndjMb0Q==",
   "success": true,
   "projectFilePath": "/home/stan05/Downloads/nomadNook/API/API.csproj",
   "expectedPackageFiles": [
+    "/home/stan05/.nuget/packages/automapper/13.0.1/automapper.13.0.1.nupkg.sha512",
     "/home/stan05/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.7/microsoft.aspnetcore.authentication.jwtbearer.8.0.7.nupkg.sha512",
     "/home/stan05/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
