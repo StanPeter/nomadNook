@@ -32,6 +32,11 @@ public class Seed
             user.PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes("Pa$$w0rd"));
             user.PasswordSalt = hmac.Key;
 
+            foreach (var photo in user.Photos)
+            {
+                photo.User = user;
+            }
+
             context.Users.Add(user);
         }
 

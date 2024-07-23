@@ -1,7 +1,7 @@
 [
     {
         "UserName": "Peggy",
-        "Gender": "Female",
+        "Gender": 1,
         "DateOfBirth": "1982-06-11",
         "NickName": "Peggy",
         "Created": "2019-05-10",
@@ -20,7 +20,7 @@
     },
     {
         "UserName": "Helene",
-        "Gender": "Female",
+        "Gender": 1,
         "DateOfBirth": "1982-03-23",
         "NickName": "Helene",
         "Created": "2019-02-19",
@@ -39,7 +39,7 @@
     },
     {
         "UserName": "Christina",
-        "Gender": "Female",
+        "Gender": 1,
         "DateOfBirth": "1988-04-25",
         "NickName": "Christina",
         "Created": "2020-03-10",
@@ -58,7 +58,7 @@
     },
     {
         "UserName": "Rosario",
-        "Gender": "Female",
+        "Gender": 1,
         "DateOfBirth": "1951-12-18",
         "NickName": "Rosario",
         "Created": "2020-05-12",
@@ -77,7 +77,7 @@
     },
     {
         "UserName": "Juliet",
-        "Gender": "Female",
+        "Gender": 1,
         "DateOfBirth": "1999-12-26",
         "NickName": "Juliet",
         "Created": "2019-06-25",
@@ -96,7 +96,7 @@
     },
     {
         "UserName": "Mcintosh",
-        "Gender": "Male",
+        "Gender": 0,
         "DateOfBirth": "1987-07-13",
         "NickName": "Mcintosh",
         "Created": "2019-04-27",
@@ -115,7 +115,7 @@
     },
     {
         "UserName": "Bird",
-        "Gender": "Male",
+        "Gender": 0,
         "DateOfBirth": "1973-01-28",
         "NickName": "Bird",
         "Created": "2019-01-23",
@@ -134,7 +134,7 @@
     },
     {
         "UserName": "Todd",
-        "Gender": "Male",
+        "Gender": 0,
         "DateOfBirth": "1991-02-05",
         "NickName": "Todd",
         "Created": "2019-07-19",
@@ -153,7 +153,7 @@
     },
     {
         "UserName": "Hooper",
-        "Gender": "Male",
+        "Gender": 0,
         "DateOfBirth": "1964-09-15",
         "NickName": "Hooper",
         "Created": "2020-05-13",
@@ -172,7 +172,7 @@
     },
     {
         "UserName": "Bates",
-        "Gender": "Male",
+        "Gender": 0,
         "DateOfBirth": "1961-07-12",
         "NickName": "Bates",
         "Created": "2019-03-18",
