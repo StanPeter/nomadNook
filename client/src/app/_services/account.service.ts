@@ -3,13 +3,14 @@ import { Injectable, inject, signal } from '@angular/core';
 import { ILogin, IRegister } from '../ts/serviceInterfaces';
 import { User } from '../_models/user';
 import { map } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AccountService {
   private http = inject(HttpClient);
-  baseUrl = 'http://localhost:5000/api';
+  baseUrl = environment.baseUrl;
   currentUser = signal<User | null>(null);
 
   login(loginModel: ILogin) {
@@ -27,7 +28,7 @@ export class AccountService {
 
   register(signUpModel: IRegister) {
     return this.http
-      .post<User>(`${this.baseUrl}/account/register`, signUpModel)
+      .post<User>(`${this.baseUrl}account/register`, signUpModel)
       .pipe(
         map((userData) => {
           if (userData) {
