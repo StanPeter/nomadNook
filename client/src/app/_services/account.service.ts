@@ -15,7 +15,7 @@ export class AccountService {
 
   login(loginModel: ILogin) {
     return this.http
-      .post<User>(`${this.baseUrl}/account/login`, loginModel)
+      .post<User>(this.baseUrl + 'account/login', loginModel)
       .pipe(
         map((userData) => {
           if (userData) {
